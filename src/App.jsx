@@ -3,6 +3,8 @@ import './App.css'
 import axios from 'axios';
 import WeatherCard from './components/WeatherCard';
 
+
+
 function App() {
 
   const [coords,setCoords] = useState()
@@ -67,9 +69,11 @@ function App() {
     <div className='app'>
       {
         isLoading
-         ? <h2 className='app__loader'>loading...</h2>
+         ? <h2 className='app__loader'></h2>
+          
+         
         : (
-      
+          
       
       <WeatherCard
         Weather={Weather}
@@ -77,6 +81,7 @@ function App() {
       />
       )
     }
+    
     </div>
   )
 }
